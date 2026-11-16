@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLACKPINK Ticket Collection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">BLΛƆK<span>PINK</span></div>
+      <span class="nav-label">MY TICKET ARCHIVE</span>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">BORN PINK • THE SHOW • WORLD TOUR</p>
+      <h1>My Concert<br><span>Ticket Collection</span></h1>
+      <p class="hero-description">
+        Every ticket tells a story. Keep your BLACKPINK memories here.
+      </p>
+      <a href="#collection" class="hero-button">Explore Collection ↓</a>
+    </div>
+
+    <div class="hero-decoration">BLINK</div>
+  </header>
+
+  <main class="container">
+
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-icon">🎟️</span>
+        <p>Total Tickets</p>
+        <h2 id="totalTickets">0</h2>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-icon">📍</span>
+        <p>Concert Locations</p>
+        <h2 id="totalLocations">0</h2>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-icon">💗</span>
+        <p>Total Spending</p>
+        <h2 id="totalSpending">Rp0</h2>
+      </div>
+    </section>
+
+    <section class="form-section" id="addTicket">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR MEMORIES</p>
+        <h2 id="formTitle">Add New Ticket <span>♡</span></h2>
+        <p>Save your favorite BLACKPINK concert memories.</p>
+      </div>
+
+      <form id="ticketForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="concertName">Concert Name *</label>
+            <input id="concertName" type="text"
+              placeholder="Example: BORN PINK WORLD TOUR" required>
+          </div>
+
+          <div class="form-group">
+            <label for="concertDate">Concert Date *</label>
+            <input id="concertDate" type="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="location">City / Venue *</label>
+            <input id="location" type="text"
+              placeholder="Example: Jakarta, GBK" required>
+          </div>
+
+          <div class="form-group">
+            <label for="seat">Seat / Section</label>
+            <input id="seat" type="text"
+              placeholder="Example: CAT 1, A12">
+          </div>
+
+          <div class="form-group">
+            <label for="price">Ticket Price (Rp)</label>
+            <input id="price" type="number" min="0"
+              placeholder="Example: 2500000">
+          </div>
+
+          <div class="form-group">
+            <label for="status">Ticket Status</label>
+            <select id="status">
+              <option value="Attended">Attended</option>
+              <option value="Upcoming">Upcoming</option>
+              <option value="Dream Concert">Dream Concert</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="ticketImage">Ticket Photo / Memory Image</label>
+            <input id="ticketImage" type="file"
+              accept="image/*">
+            <small>Choose a photo from your device. Maximum 2 MB.</small>
+            <div id="imagePreview" class="image-preview"></div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="notes">Special Memory</label>
+            <textarea id="notes" rows="3"
+              placeholder="Write your favorite concert memory..."></textarea>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="primary-button" id="submitButton">
+            + Add My Ticket
+          </button>
+          <button type="button" class="cancel-button hidden"
+            id="cancelEdit">Cancel Edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="collection-section" id="collection">
+      <div class="collection-heading">
+        <div>
+          <p class="eyebrow">THE BLINK ARCHIVE</p>
+          <h2>My Collection <span>♡</span></h2>
+          <p>All your special concert moments in one place.</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <input type="search" id="searchInput"
+          placeholder="Search concert or location...">
+
+        <select id="filterStatus">
+          <option value="All">All Tickets</option>
+          <option value="Attended">Attended</option>
+          <option value="Upcoming">Upcoming</option>
+          <option value="Dream Concert">Dream Concert</option>
+        </select>
+      </div>
+
+      <div id="ticketList" class="ticket-grid"></div>
+
+      <div id="emptyMessage" class="empty-message">
+        <div>🎀</div>
+        <h3>No tickets yet!</h3>
+        <p>Add your first BLACKPINK concert memory.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-logo">BLΛƆK<span>PINK</span></div>
+    <p>Made with ♡ for every BLINK.</p>
+    <small>Fan-made personal collection project. Not an official BLACKPINK website.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
